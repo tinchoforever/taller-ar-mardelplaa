@@ -118,6 +118,7 @@ a, button{
           <img src="logo-mdq.png">
         </div>
       </div>
+    </div>
   </body>
   <script>
     var videos = ["teleport","fuerza", "volar"];
@@ -145,7 +146,6 @@ a, button{
           (function(vid,id,i){
             document.getElementById(id+ '-marker').addEventListener('marker-found', function(e){ 
                vid.play();
-               
                vid.onended = checkOpenYoutube;
                played[i] = true;
             });
