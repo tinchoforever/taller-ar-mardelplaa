@@ -4,7 +4,7 @@
 <title>360 Video</title>
 <meta name="description" content="360 Video — A-Frame">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,900" rel="stylesheet">
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="../aframe-ar.js"> </script>
 <style>
@@ -16,11 +16,15 @@ html{
       width: 100%;
 }
 .logos img{
-
+    display: inline-flex;
     max-width: 100px;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
 
+}
+h1{
+  text-transform: uppercase;
+  font-weight: 900;
 }
 .hidden{
   display: none;
@@ -39,7 +43,7 @@ html{
   justify-content: center;
 }
 div.inner{
-  padding:4em;
+  padding:2.5em;
   text-align: center;
   color:white;
 }
@@ -47,6 +51,10 @@ a, button{
   cursor: pointer;
   font-size: 2em;
    font-family: 'Poppins', sans-serif;
+   color: white;
+    text-decoration: underline;
+    text-transform: uppercase;
+
   /*height: 20px;
     width: 100px;*/
     margin: auto 0;
@@ -88,7 +96,7 @@ a, button{
     <div id="wrapper" class="wrapper">
       <div class="inner">
         <h1> Poderes </h1>
-        <h2> Una historia de poderes </h2>
+        <h5> Una historia de poderes </h5>
         <p> Aceptá permisos de camára, bajate los marcadores, escanealos y entrá a la historia </p>
         <button type="button" onClick="start(this.parentNode.parentNode)">Empezar</button>
         <h6> <small> Con el apoyo de </small> </h6>
