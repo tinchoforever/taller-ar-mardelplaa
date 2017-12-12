@@ -1,6 +1,10 @@
 <!doctype HTML>
 <html>
 <head>
+<title>360 Video</title>
+<meta name="description" content="360 Video — A-Frame">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="../aframe-gif-shader.js"></script>
 <script src="../aframe-ar.min.js"> </script>
@@ -14,9 +18,9 @@
   
     <a-scene embedded arjs>
       <a-assets>
-         <video id="teleport" loop="true" autoplay src="teleport-video.mp4">
-          <video id="fuerza" loop="true" autoplay src="fuerza.mp4">
-            <video id="volar" loop="true" autoplay src="volar.mp4">
+         <video id="teleport" loop="true"  webkit-playsinline autoplay src="teleport-video.mp4">
+          <video id="fuerza" loop="true"  webkit-playsinline autoplay src="fuerza.mp4">
+            <video id="volar" loop="true"  webkit-playsinline autoplay src="volar.mp4">
     </a-assets>  	
 	
     
