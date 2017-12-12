@@ -4,11 +4,15 @@
 <title>360 Video</title>
 <meta name="description" content="360 Video — A-Frame">
 <meta name="apple-mobile-web-app-capable" content="yes">
-
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <!-- <script src="../aframe-gif-shader.js"></script> -->
 <script src="../aframe-ar.js"> </script>
 <style>
+html{
+  font-family: 'Poppins', sans-serif;
+
+}
 #wrapper {
   z-index: 300000;
   background: black;
@@ -16,12 +20,19 @@
   width: 100%;
   position: absolute;
   top: 0;
+  left:0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+div.inner{
+  padding:4em;
+  text-align: center;
+  color:white;
+}
 button{
-  font-size: 4em;
+  font-size: 2em;
+   font-family: 'Poppins', sans-serif;
   /*height: 20px;
     width: 100px;*/
     margin: auto 0;
@@ -60,7 +71,13 @@ button{
     </a-marker>
   	<a-entity camera></a-entity>
     </a-scene>
-    <div id="wrapper"><button type="button" onClick="start(this.parentNode)">Empezar</button></div>
+    <div id="wrapper">
+      <div class="inner">
+        <h1> Poderes </h1>
+        <h2> Una historia de poderes </h2>
+        <p> Bajate los marcadores, escanealos y entrá a la historia </p>
+        <button type="button" onClick="start(this.parentNode.parentNode)">Empezar</button></div>
+      </div>
   </body>
   <script>
   function start(element) {
