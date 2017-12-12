@@ -5,9 +5,9 @@
 <meta name="description" content="360 Video — A-Frame">
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-<script src="https://rawgit.com/aframevr/aframe/e8883b9/dist/aframe-master.min.js"></script>
-<script src="../aframe-gif-shader.js"></script>
-<script src="../aframe-ar.min.js"> </script>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<!-- <script src="../aframe-gif-shader.js"></script> -->
+<script src="../aframe-ar.js"> </script>
 <style>
 #arjsDebugUIContainer, .arjsDebugUIContainer, .a-enter-vr {
   display: none;
@@ -16,7 +16,7 @@
 </head>
   <body style='margin : 0px; overflow: hidden;'>
   
-    <a-scene embedded arjs>
+    <a-scene embedded arjs='debugUIEnabled: false;'>
       <a-assets>
          <video id="teleport" loop="true"  webkit-playsinline autoplay src="teleport-video.mp4">
           <video id="fuerza" loop="true"  webkit-playsinline autoplay src="fuerza.mp4">
@@ -25,17 +25,17 @@
 	
     
     
-    <a-marker  preset='custom' type='pattern' url='teleport-base.patt'>
+    <a-marker id="teleport-marker" preset='custom' type='pattern' url='teleport-base.patt'>
              <a-video src="#teleport" width="4" height="2" position="0 0 0" rotation="-90 180 -180" >
              </a-video>
     </a-marker>
 
-    <a-marker  preset='custom' type='pattern' url='volar.patt'>
+    <a-marker id="volar-marker" preset='custom' type='pattern' url='volar.patt'>
              <a-video src="#volar" width="4" height="2" position="0 0 0" rotation="-90 180 -180" >
              </a-video>
     </a-marker>
 
-    <a-marker  preset='custom' type='pattern' url='fuerza.patt'>
+    <a-marker id="fuerza-marker" preset='custom' type='pattern' url='fuerza.patt'>
              <a-video src="#fuerza" width="4" height="2" position="0 0 0" rotation="-90 180 -180" >
              </a-video>
     </a-marker>
