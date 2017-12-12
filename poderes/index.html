@@ -70,9 +70,9 @@ a, button{
 
     <a-scene embedded arjs='debugUIEnabled: false;'>
       <a-assets>
-         <video id="teleport" loop="true"  webkit-playsinline  src="teleport-video.mp4">
-          <video id="fuerza" loop="true"  webkit-playsinline  src="fuerza.mp4">
-            <video id="volar" loop="true"  webkit-playsinline  src="volar.mp4">
+         <video id="teleport"  webkit-playsinline  src="teleport-video.mp4">
+          <video id="fuerza"   webkit-playsinline  src="fuerza.mp4">
+            <video id="volar"   webkit-playsinline  src="volar.mp4">
     </a-assets>  	
 	
     
@@ -146,7 +146,9 @@ a, button{
           (function(vid,id,i){
             document.getElementById(id+ '-marker').addEventListener('marker-found', function(e){ 
                vid.play();
-               vid.onended = checkOpenYoutube;
+               vid.onended = function(e) {
+                 checkOpenYoutube()
+              };
                played[i] = true;
             });
             document.getElementById(id+'-marker').addEventListener('marker-lost', function(e){ 
